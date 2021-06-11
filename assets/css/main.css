@@ -1,0 +1,975 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pattaya&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400&display=swap');
+
+*{
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    background: #edecec;
+}
+
+/* --- NavBar --- */
+
+.nav-bg{
+    background: #222222;
+}
+
+.fa-bars{
+    color: #f4f4f4;
+}
+
+.navbar-toggler{
+    border: none;
+    color: #f4f4f4;
+    font-size: 24px;
+}
+
+.navbar-toggler:focus{
+    outline: none;
+}
+
+.navbar-brand, .navbar-brand:hover{
+    color: #f4f4f4;
+    font-family: 'Pattaya', sans-serif;
+}
+
+.nav-link{
+    color: #f4f4f4;
+}
+
+.nav-link:hover{
+    color: #d3d3d3;
+}
+
+.nav-link::after{
+    color: #f4f4f4;
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #f44336;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.nav-link:hover::after{
+    width: 100%;
+}
+
+/* --- Banner --- */
+
+.banner-image{
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)), url('../img/image1.jpg');
+    background-size: cover;
+}
+
+.banner-title{
+    font-size: 50px;
+    font-family: 'Pattaya', sans-serif;
+}
+
+.banner-text{
+    font-size: 20px;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+/* --- About Section --- */
+
+.about-section{
+    background: #333333;
+    display: flex;
+    align-items: center;
+}
+
+.about-container{
+    width: 100%;
+    margin: 0 auto;
+    padding: 50px;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-img img{
+    width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+.about-inner > *{
+    margin-bottom: 1.1rem;
+}
+
+.about-inner h3{
+    font-size: 50px;
+    font-family: 'Pattaya', sans-serif;
+    color: #f4f4f4;
+}
+
+.about-inner h5{
+    font-size: 22px;
+    text-transform: uppercase;
+    color: #d1d1d1;
+    font-weight: 600;
+}
+
+.about-inner p{
+    font-size: 18px;
+    color: #f4f4f4;
+}
+
+/* --- Cards --- */
+
+.cards-container{
+    display: grid;
+    grid-template-columns: 310px 310px 310px;
+    justify-content: center;
+    align-content: center;
+}
+
+.card-image{
+    position: relative;
+    width: 300px;
+    height: 200px;
+    padding: 0;
+}
+
+.card-image img{
+    width: 300px;
+    height: 200px;
+    filter:brightness(0.6);
+    position: relative;
+    vertical-align: middle;
+    transition: all 0.4s ease;
+}
+
+.card-image:hover img{
+    filter:brightness(1);
+}
+
+.card-details{
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #f4f4f4;
+    width: 100%;
+    height: 100%;
+}
+
+.card-details h2, .card-details a{
+    text-decoration: none;
+    color: #f4f4f4;
+    text-align: center;
+    font-size: 35px;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-top: 90px;
+    transition: all 0.3s ease;
+}
+
+.card-details h2:hover, .card-details a:hover{
+    transform: scale(1.1);
+}
+
+/* --- Footer --- */
+
+.footer-title{
+    font-family: 'Inconsolata', monospace;
+    font-weight: 500;
+    font-size: 26px;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: 190px 190px 190px 190px 190px;
+    justify-content: center;
+}
+
+.instagram-post{
+    width: 180px; 
+    height: 180px;
+    padding: 0;
+    margin: 0;
+    transition: all 0.3s ease;
+}
+
+.instagram-post:hover{
+    filter:brightness(0.85);
+}
+
+.designer-website{
+    color: #edecec;
+    text-decoration: none;
+}
+
+.designer-website:hover{
+    color: #f44336;
+}
+
+/* --- About Page --- */
+
+.about-page{
+    padding: 0 20px;
+}
+
+.about-page-title{
+    text-align: center;
+    font-family: 'Pattaya', sans-serif;
+}
+
+.about-page-content{
+    padding: 0 40px;
+    margin: 0;
+}
+
+.about-page-text{
+    text-align: justify;
+    padding: 0 120px;
+}
+
+/* --- Social Media Section --- */
+
+.social-title{
+    font-size: 18px;
+    margin-bottom: 12px;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 0 12px;
+}
+
+.social-menu{
+    display: grid;
+    grid-template-columns: 65px 65px 65px 65px;
+    justify-content: center;
+}
+
+.social-menu ul{
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.social-menu ul li{
+    list-style: none;
+    margin: 0 5px;
+}
+
+.social-menu ul li .fab{
+    font-size: 30px;
+    line-height: 55px;
+    transition: .6s;
+    color: #222222;
+}
+
+.social-menu ul li .fab:hover{
+    color: #f4f4f4;
+}
+
+.social-menu ul li a{
+    position: relative;
+    display: block;
+    width: 55px;
+    height: 55px;
+    border-radius: 50px;
+    background: #f4f4f4;
+    text-align: center;
+    transition: .6s;
+    box-shadow: 0 5px 3px rgba(0,0,0,0.3);
+}
+
+.social-menu ul li a:hover{
+    transform: translate(0, -10px);
+}
+
+.social-menu ul li:nth-child(1) a:hover{
+    background-color: #55acee;
+}
+
+.social-menu ul li:nth-child(2) a:hover{
+    background-color: #e4405f;
+}
+
+.social-menu ul li:nth-child(3) a:hover{
+    background-color: #bd081c;
+}
+
+.social-menu ul li:nth-child(4) a:hover{
+    background-color: #3b5999;
+}
+
+/* --- Gallery --- */
+
+.gallery-title{
+    font-family: 'Pattaya', sans-serif;
+    margin-bottom: 1.5%;
+}
+
+.wrapper{
+    max-width: 1100px;
+}
+
+.wrapper .gallery{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.gallery span{
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+}
+
+.gallery .image{
+    padding: 7px;
+    width: calc(100% / 3);
+}
+
+.gallery .image img{
+    width: 100%;
+    vertical-align: middle;
+    transition: all 0.3s ease;
+}
+
+.gallery .image img:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.preview-box{
+    position: fixed;
+    max-width: 700px;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    z-index: 5;
+    transform: translate(-50%, -50%) scale(0.9);
+    background: #f4f4f4;
+    padding: 0 5px 5px 5px;
+    opacity: 0;
+    pointer-events: none;
+    border-radius: 3px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.7);
+}
+
+.preview-box.show{
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+    transition: all 0.3s ease;
+}
+
+.preview-box .details{
+    display: flex;
+    align-items: center;
+    padding: 12px 15px 12px 10px;
+    justify-content: space-between;
+}
+
+.preview-box .details .icon{
+    color: #222222;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.details .title{
+    display: flex;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.details .title p{
+    margin: 0 5px;
+}
+
+.details .title p.current-img{
+    font-weight: 500;
+}
+
+.preview-box .img-box{
+    display: flex;
+    width: 100%;
+}
+
+.img-box .slide{
+    position: absolute;
+    top: 50%;
+    z-index: 3;
+    width: 100%;
+    font-size: 30px;
+    cursor: pointer;
+    color: #f4f4f4;
+    width: 60px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+}
+
+.img-box .slide.prev{
+    left: 0;
+}
+
+.img-box .slide.next{
+    right: 0;
+}
+
+.preview-box .img-box img{
+    width: 100%;
+    border-radius: 0 0 3px 3px;
+}
+
+.shadow-background{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: none;
+    background: rgba(0,0,0,0.7);
+}
+
+/* --- Portfolio --- */
+
+.portfolio-title{
+    font-family: 'Pattaya', sans-serif;
+}
+
+.portfolio{
+    display: grid;
+    grid-template-columns: 420px 420px;
+    justify-content: center;
+}
+
+.portfolio-image{
+    position: relative;
+    width: 400px;
+    height: 300px;
+    margin: 10px;
+    overflow: hidden;
+}
+
+.portfolio-image img{
+    width: 400px;
+    height: 300px;
+    position: relative;
+    vertical-align: middle;
+    transition: all 0.3s ease;
+}
+
+.portfolio-image:hover img{
+    transform: scale(1.1);
+}
+
+.portfolio-details{
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #f4f4f4;
+    width: 100%;
+    height: 100%;
+}
+
+.portfolio-details h2{
+    text-align: center;
+    font-size: 35px;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-top: 140px;
+}
+
+.portfolio-gallery{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* --- Blog Page --- */
+
+.blog{
+    background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url('../img/image2.jpg');
+    background-size: cover;
+    height: 400px;
+}
+
+.header-title h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 200px;
+}
+
+.blog-section{
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-template-columns: 360px 360px 360px;
+}
+
+.card{
+    padding: 0;
+    width: 350px;
+    height: auto;
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+}
+
+.card:hover{
+    transform: scale(1.03);
+    box-shadow: 0 4px 4px rgba(0,0,0,0.3);
+}
+
+.card-body{
+    padding: 12px;
+}
+
+.card-info{
+    margin-bottom: 8px;
+    font-size: 13px;
+}
+
+.card-info i{
+    margin: 0 2px;
+}
+
+.card-title{
+    text-decoration: none;
+    color: #222222;
+    transition: all 0.3s ease;
+}
+
+.card-title h5:hover, .card-title a:hover{
+    color: #f44336;
+}
+
+.card-text{
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.card-link{
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 13px;
+    color: #222222;
+    transition: all 0.3s ease;
+}
+
+.card-link:hover{
+    color: #f44336;
+}
+
+/* --- Post Page --- */
+
+.post-page{
+    padding: 0 20px;
+}
+
+.post-page-image{
+    display: flex;
+    justify-content: center;
+    margin: 36.5px 0;
+    padding: 0;
+}
+
+.post-image{
+    width: 56%;
+    height: 56%;
+}
+
+.post-page-content{
+    padding: 0 40px;
+}
+
+.post-meta{
+    text-align: center;
+}
+
+.post-title{
+    margin-bottom: 18px;
+}
+
+.post-info i{
+    margin: 0 3px;
+}
+
+.post-line{
+    width: 80%;
+    margin: 20px auto;
+}
+
+.post-text{
+    padding: 0 120px;
+    text-align: justify;
+}
+
+/* --- Last Post Section --- */
+
+.post-section-title{
+    font-size: 20px;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+}
+
+.post-section-title i{
+    color: #f44336;
+}
+
+.post-section-cards{
+    display: grid;
+    grid-template-columns: 360px 360px 360px;
+    justify-content: center;
+    align-content: center;
+}
+
+.post-section-card{
+    position: relative;
+    width: 350px;
+    height: 265px;
+    padding: 0;
+    border-radius: 8px;
+}
+
+.post-section-card-image{
+    position: relative;
+    width: 350px;
+    height: 200px;
+    padding: 0;
+}
+
+.post-section-card-image img{
+    width: 350px;
+    height: 200px;
+    position: relative;
+    vertical-align: middle;
+    transition: all 0.3s ease;
+}
+
+.post-section-card-image:hover img{
+    filter:brightness(0.6);
+}
+
+.post-section-card-details{
+    color: #222222;
+    text-align: center;
+    padding: 10px 10px 5px 10px;
+    position: relative;
+}
+
+.post-section-card-details h2, .post-section-card-details a{
+    text-decoration: none;
+    color: #222222;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.post-section-card-details h2:hover, .post-section-card-details a:hover{
+    color: #f44336;
+}
+
+.post-section-card-date{
+    font-size: 12px;
+    font-weight: normal;
+    padding: 0;
+}
+
+.post-section-card-date i{
+    margin-right: 2px;
+}
+
+/* --- Responsive Desing --- */
+
+@media only screen and (max-width: 1100px){
+    .grid-container{
+        grid-template-columns: 160px 160px 160px 160px 160px;
+    }
+    .instagram-post{
+        width: 150px; 
+        height: 150px;
+    }
+    .post-section-cards{
+        grid-template-columns: 310px 310px 310px;
+    }
+    .post-section-card{
+        width: 300px;
+    }
+    .post-section-card-image, .post-section-card-image img{
+        width: 300px;
+    }
+    .blog-section{
+        grid-template-columns: 310px 310px 310px;
+    }
+    .card{
+        width: 300px;
+    }
+}
+
+@media only screen and (max-width: 993px){
+    .grid-container{
+        grid-template-columns: 130px 130px 130px 130px 130px;
+    }
+    .instagram-post{
+        width: 120px; 
+        height: 120px;
+    }
+    .about-inner h3{
+        font-size: 35px;
+    }
+    
+    .about-inner h5{
+        font-size: 16px;
+    }
+    
+    .about-inner p{
+        font-size: 14px;
+    }
+    .gallery .image{
+        width: calc(100% / 2);
+    }
+    .cards-container{
+        grid-template-columns: 280px 280px 280px;
+    }
+    .card-image, .card-image img{
+        width: 270px;
+        height: 170px;
+    }
+    .card-details h2, .card-details a{
+        margin-top: 75px;
+        font-size: 30px;
+    }
+    .post-text{
+        padding: 0 80px;
+    }
+    .about-page-text{
+        padding: 0 80px;
+    }
+    .post-section-cards{
+        grid-template-columns: 280px 280px 280px;
+    }
+    .post-section-card{
+        width: 270px;
+        width: 235px;
+    }
+    .post-section-card-image, .post-section-card-image img{
+        width: 270px;
+        height: 170px;
+    }
+    .blog-section{
+        grid-template-columns: 280px 280px 280px;
+    }
+    .card{
+        width: 270px;
+    }
+}
+
+@media only screen and (max-width: 900px){
+    .portfolio{
+        grid-template-columns: 270px 270px;
+    }
+    .portfolio-image, .portfolio-image img{
+        width: 250px;
+        height: 150px;
+    }
+    .portfolio-details h2{
+        margin-top: 50px;
+        font-size: 25px;
+    }
+    .portfolio-btn{
+        font-size: 12px;
+        padding: 3px 6px;
+    }
+    .cards-container{
+        grid-template-columns: 510px;
+        margin-bottom: 5%;
+    }
+    .card-image, .card-image img{
+        width: 500px;
+        height: 300px;
+        margin: 10px 0;
+    }
+    .card-details{
+        margin: 10px 0;
+    }
+    .card-details h2, .card-details a{
+        margin-top: 140px;
+        font-size: 40px;
+    }
+    .post-image{
+        width: 80%;
+        height: 80%;
+    }
+    .post-text{
+        padding: 0 50px;
+    }
+    .post-line{
+        width: 100%;
+    }
+    .about-page-text{
+        padding: 0 50px;
+    }
+    .post-section-cards{
+        grid-template-columns: 510px;
+        margin-bottom: 5%;
+    }
+    .post-section-card{
+        width: 500px;
+        height: 365px;
+        margin: 10px 0;
+    }
+    .post-section-card-image, .post-section-card-image img{
+        width: 500px;
+        height: 300px;
+    }
+    .post-section-card-details h2, .post-section-card-details a{
+        font-size: 22px;
+    }
+    .post-section-card-date{
+        font-size: 14px;
+    }
+    .blog-section{
+        grid-template-columns: 375px 375px;
+    }
+    .card{
+        width: 365px;
+    }
+}
+
+@media only screen and (max-width: 770px){
+    .grid{
+        grid-template-columns: 1fr;
+    }
+    .post-text{
+        padding: 0 30px;
+    }
+    .about-page-text{
+        padding: 0 30px;
+    }
+    .blog-section{
+        grid-template-columns: 315px 315px;
+    }
+    .card{
+        width: 305px;
+    }
+}
+
+@media only screen and (max-width: 700px){
+    .grid-container{
+        grid-template-columns: 110px 110px 110px 110px 110px;
+    }
+    .instagram-post{
+        width: 100px;
+        height: 100px;
+    }
+    .page-info{
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 670px){
+    .blog-section{
+        grid-template-columns: 510px;
+    }
+    .card{
+        width: 500px;
+    }
+}
+
+@media only screen and (max-width: 650px){
+    .portfolio{
+        grid-template-columns: 420px;
+        margin-bottom: 8%;
+    }
+    .portfolio-image, .portfolio-image img{
+        width: 400px;
+        height: 300px;
+    }
+    .portfolio-details h2{
+        margin-top: 140px;
+        font-size: 35px;
+    }
+    .post-page{
+        padding: 0 5px;
+    }
+    .post-image{
+        width: 90%;
+        height: 90%;
+    }
+    .post-text{
+        padding: 0;
+    }
+    .about-page-text{
+        padding: 0;
+    }
+    .about-page{
+        padding: 0 5px;
+    }
+}
+
+@media only screen and (max-width: 590px){
+    .grid-container{
+        grid-template-columns: 110px 110px 110px;
+        grid-template-rows: 110px 110px;
+        align-content: center;
+    }
+    .footer-title{
+        font-size: 22px;
+    }
+    .page-info{
+        font-size: 13px;
+    }
+    .gallery .image{
+        padding: 4px;
+        width: 100%;
+    }
+    .cards-container{
+        grid-template-columns: 410px;
+    }
+    .card-image, .card-image img{
+        width: 400px;
+        height: 300px;
+        margin: 10px 0;
+    }
+    .card-details{
+        margin: 10px 0;
+    }
+    .card-details h2, .card-details a{
+        margin-top: 140px;
+        font-size: 40px;
+    }
+    .post-page-content{
+        padding: 0 20px;
+    }
+    .about-page-content{
+        padding: 0 20px;
+    }
+    .post-section-cards{
+        grid-template-columns: 410px;
+    }
+    .post-section-card{
+        width: 400px;
+        height: 365px;
+        margin: 10px 0;
+    }
+    .post-section-card-image, .post-section-card-image img{
+        width: 400px;
+        height: 300px;
+    }
+    .post-section-card-details h2, .post-section-card-details a{
+        font-size: 20px;
+    }
+    .blog-section{
+        grid-template-columns: 410px;
+    }
+    .card{
+        width: 400px;
+    }
+}
